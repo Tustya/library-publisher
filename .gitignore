@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+pip-wheel-metadata/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Node
+node_modules/
+frontend/dist/
+*.local
+*.tsbuildinfo
+.npm/
+.yarn/
+.pnp.*
+.pnpm-store/
+.eslintcache
+.stylelintcache
+.vite/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# Temp
+tmp/
+temp/
+.cache/
+
+# Local databases / dumps (если не часть исходников)
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql.gz
+*.tar.gz
+*.zip
+
+# CSV (исходные данные — по желанию не коммитить большие файлы)
+# Новая таблица*.csv
+
+# Local notes / artifacts
+/artifacts/
+/colors
+IMPLEMENTATION_CHECKLIST.md
+SERVER_SETUP.txt

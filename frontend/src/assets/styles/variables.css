@@ -1,0 +1,52 @@
+/**
+ * Переменные оформления.
+ * Breakpoints: 320px (mobile), 768px (tablet), 1024px+ (desktop).
+ * Использовать в media queries: min-width: 768px, min-width: 1024px.
+ */
+
+:root {
+  /* Цвета */
+  --color-primary: #0a7ea4;
+  --color-primary-hover: #086888;
+  --color-text: #222;
+  --color-text-muted: #555;
+  --color-text-light: #777;
+  --color-border: #ccc;
+  --color-border-light: #e0e0e0;
+  --color-background: #fff;
+  --color-background-alt: #f8f9fa;
+  --color-error: #c00;
+  --color-success: #2e7d32;
+  --color-success-bg: #e8f5e9;
+  --color-error-bg: #ffebee;
+
+  /* Фокус */
+  --focus-outline: 2px solid var(--color-primary);
+  --focus-outline-offset: 2px;
+
+  /* Отступы и размеры */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.5rem;
+  --spacing-2xl: 2rem;
+
+  /* Радиусы */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Шрифты */
+  --font-base: 1rem;
+  --font-sm: 0.875rem;
+  --font-xs: 0.8125rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+  --line-height: 1.5;
+
+  /* Контейнер */
+  --container-narrow: 40rem;
+  --container-wide: 48rem;
+}
