@@ -21,7 +21,7 @@ if config.config_file_name:
     fileConfig(config.config_file_name)
 
 target_metadata = Base.metadata
-database_url_sync = settings.database_url.replace("+asyncpg", "").replace(
+database_url_sync = settings.effective_database_url.replace("+asyncpg", "").replace(
     "postgresql+asyncpg", "postgresql"
 )
 config.set_main_option("sqlalchemy.url", database_url_sync)
