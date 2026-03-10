@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useAuth } from '@/composables/useAuth'
 
 const route = useRoute()
-const router = useRouter()
 const { user, isAuthenticated, isAdmin } = useAuth()
 const menuOpen = ref(false)
 

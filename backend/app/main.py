@@ -4,7 +4,7 @@ from starlette.middleware.base import BaseHTTPMiddleware, RequestResponseEndpoin
 from starlette.requests import Request
 from starlette.responses import Response
 
-from fastapi import FastAPI
+from fastapi import APIRouter, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.admin import router as admin_router
@@ -41,11 +41,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.include_router(auth_router)
-app.include_router(catalog_router)
-app.include_router(queue_router)
-app.include_router(reservations_router)
-app.include_router(admin_router)
+
+api_router = APIRouter(prefix="/api")
+api_router.include_router(auth_router)
+api_router.include_router(catalog_router)
+api_router.include_router(queue_router)
+api_router.include_router(reservations_router)
+api_router.include_router(admin_router)
+app.include_router(api_router)
 
 
 @app.get("/")
@@ -57,4 +60,10 @@ async def root():
 @app.get("/health")
 async def health():
     """Эндпоинт для проверки здоровья сервиса."""
+    return {"status": "healthy"}
+
+
+@app.get("/api/health")
+async def api_health():
+    """Эндпоинт для проверки здоровья API через reverse proxy (/api)."""
     return {"status": "healthy"}

@@ -146,16 +146,6 @@ async function save(): Promise<void> {
   }
 }
 
-function statusLabel(status: string): string {
-  const labels: Record<string, string> = {
-    created: 'Оформлена',
-    issued: 'Выдана',
-    returned: 'Возвращена',
-    cancelled: 'Отменена',
-  }
-  return labels[status] ?? status
-}
-
 async function loadReservations(): Promise<void> {
   if (!authUser.value) return
   reservationsLoading.value = true

@@ -39,13 +39,6 @@ const statusLabels: Record<string, string> = {
   cancelled: 'Отменена',
 }
 
-const deliveryStatusLabels: Record<string, string> = {
-  ordered: 'Заказано',
-  in_transit: 'В пути',
-  delivered: 'Доставлено',
-  returning: 'Возврат',
-}
-
 function formatDate(iso: string): string {
   return new Date(iso).toLocaleDateString('ru-RU', {
     day: '2-digit',
@@ -56,10 +49,6 @@ function formatDate(iso: string): string {
 
 function statusLabel(s: string): string {
   return statusLabels[s] ?? s
-}
-
-function deliveryStatusLabel(s: string): string {
-  return deliveryStatusLabels[s] ?? s
 }
 
 const filteredReservations = computed(() =>
