@@ -1,8 +1,6 @@
-# Использовать вместе с nginx на хосте (домен progs-nik.ru).
-# Запуск: docker compose -f docker-compose.yml -f deploy/docker-compose.nginx.yml up -d
-# Frontend слушает только на 127.0.0.1:8080; порт 80 занимает nginx на хосте.
+# Для домена progs-nik.ru frontend уже слушает 127.0.0.1:8080 (docker-compose.yml).
+# Этот файл не меняет порты; оставлен для совместимости со старыми инструкциями.
+# Запуск: docker compose up -d
 
 services:
-  frontend:
-    ports:
-      - "127.0.0.1:8080:80"
+  frontend: {}
